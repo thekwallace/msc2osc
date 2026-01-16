@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSC2OSC - MIDI Show Control to OSC Bridge for macOS</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #333;
+            --text-light: #666;
+            --bg: #fafafa;
+            --card-bg: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-dark);
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .features {
+            padding: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+        }
+
+        .usage {
+            background: var(--card-bg);
+            padding: 60px 0;
+        }
+
+        .usage h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .step-number {
+            background: var(--primary);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin-bottom: 5px;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+        }
+
+        .requirements {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .requirements h2 {
+            margin-bottom: 20px;
+        }
+
+        .requirements p {
+            color: var(--text-light);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        footer a:hover {
+            opacity: 1;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MSC2OSC</h1>
+            <p>A lightweight macOS menu bar app that bridges MIDI Show Control to Open Sound Control in real-time.</p>
+            <a href="releases.html" class="download-btn">Download for macOS</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Real-Time Translation</h3>
+                    <p>Sub-millisecond latency conversion from MSC to OSC messages.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Menu Bar App</h3>
+                    <p>Runs quietly in your menu bar, always ready when you need it.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Flexible OSC Paths</h3>
+                    <p>Customize OSC paths with tokens like {command}, {cue}, {list}, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Command Filtering</h3>
+                    <p>Enable or disable specific MSC commands to forward only what you need.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Auto Reconnect</h3>
+                    <p>Automatically reconnects to MIDI devices when they're plugged back in.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Message Monitor</h3>
+                    <p>View incoming MSC and outgoing OSC messages with search filtering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="usage">
+        <div class="container">
+            <h2>Quick Setup</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Select MIDI Input</h4>
+                        <p>Choose your MSC source from the Settings menu.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Configure OSC Destination</h4>
+                        <p>Enter the IP address and port of your OSC server.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Customize Path Format</h4>
+                        <p>Optionally customize the OSC path template to match your setup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="requirements">
+        <div class="container">
+            <h2>System Requirements</h2>
+            <p>macOS 14.0 (Sonoma) or later</p>
+            <p>Apple Silicon or Intel Mac</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="releases.html">Releases</a>
+                <a href="https://github.com/thekwallace/msc2osc">GitHub</a>
+                <a href="support.html">Support</a>
+            </div>
+            <p class="copyright">&copy; 2025-2026 kwallace.com LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

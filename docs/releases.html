@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Releases - MSC2OSC</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #333;
+            --text-light: #666;
+            --bg: #fafafa;
+            --card-bg: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .release {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .release-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .release-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .release-title h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .tag {
+            background: var(--primary);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .tag.latest {
+            background: #28a745;
+        }
+
+        .release-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .release-notes {
+            margin-bottom: 20px;
+        }
+
+        .release-notes h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+
+        .release-notes ul {
+            margin-left: 20px;
+            color: var(--text-light);
+        }
+
+        .release-notes li {
+            margin-bottom: 5px;
+        }
+
+        .download-section {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .download-section h3 {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .file-info {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .requirements {
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .requirements h3 {
+            margin-bottom: 10px;
+        }
+
+        .requirements p {
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        footer a:hover {
+            opacity: 1;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="nav-back">&larr; Back to MSC2OSC</a>
+            <h1>Releases</h1>
+            <p>Download MSC2OSC for macOS</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="release">
+                <div class="release-header">
+                    <div class="release-title">
+                        <h2>v1.1.0</h2>
+                        <span class="tag latest">Latest</span>
+                    </div>
+                    <span class="release-date">December 31, 2025</span>
+                </div>
+
+                <div class="release-notes">
+                    <h3>What's New</h3>
+                    <ul>
+                        <li>Real-time MSC to OSC translation</li>
+                        <li>Customizable OSC path templates with token substitution</li>
+                        <li>Individual command filtering</li>
+                        <li>MIDI source auto-reconnection</li>
+                        <li>Message monitor with search</li>
+                    </ul>
+                </div>
+
+                <div class="download-section">
+                    <h3>Downloads</h3>
+                    <a href="https://github.com/thekwallace/msc2osc/releases/download/v1.1.0/MSC2OSC.dmg" class="download-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        MSC2OSC.dmg
+                    </a>
+                    <p class="file-info">Universal binary for Apple Silicon and Intel Macs</p>
+                </div>
+            </div>
+
+            <div class="requirements">
+                <h3>System Requirements</h3>
+                <p>macOS 14.0 (Sonoma) or later</p>
+                <p>Apple Silicon or Intel Mac</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/thekwallace/msc2osc">GitHub</a>
+                <a href="support.html">Support</a>
+                <a href="index.html">Home</a>
+            </div>
+            <p class="copyright">&copy; 2025-2026 kwallace.com LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

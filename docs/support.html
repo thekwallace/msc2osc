@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - MSC2OSC</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #333;
+            --text-light: #666;
+            --bg: #fafafa;
+            --card-bg: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .faq {
+            margin-bottom: 60px;
+        }
+
+        .faq h2 {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .faq-item h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+        }
+
+        .faq-item code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .contact-form > p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .contact-alt {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .contact-alt a {
+            color: var(--primary);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            opacity: 0.8;
+        }
+
+        footer a:hover {
+            opacity: 1;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            margin: 0 15px;
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="nav-back">&larr; Back to MSC2OSC</a>
+            <h1>Support</h1>
+            <p>Get help with MSC2OSC</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>How do I select a MIDI input source?</h3>
+                    <p>Open Settings from the menu bar icon and select your MIDI device from the Input dropdown. MSC2OSC will automatically reconnect if the device is disconnected and reconnected.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I configure the OSC destination?</h3>
+                    <p>In Settings, enter the IP address and port of your OSC server. The default is <code>127.0.0.1:8000</code> for localhost.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I customize the OSC path format?</h3>
+                    <p>Use tokens like <code>{command}</code>, <code>{cue}</code>, <code>{list}</code>, <code>{path}</code>, <code>{format}</code>, and <code>{device}</code> in your OSC path template. For example: <code>/msc/{command}/{list}/{cue}</code></p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What MSC commands are supported?</h3>
+                    <p>MSC2OSC supports all standard MSC commands including GO, STOP, RESUME, TIMED_GO, LOAD, SET, FIRE, ALL_OFF, RESTORE, RESET, GO_OFF, and more.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I filter specific commands?</h3>
+                    <p>Yes, you can enable or disable forwarding for individual MSC commands in the Settings panel.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What macOS versions are supported?</h3>
+                    <p>MSC2OSC requires macOS 14.0 (Sonoma) or later and runs natively on both Apple Silicon and Intel Macs.</p>
+                </div>
+            </section>
+
+            <section class="contact-form">
+                <h2>Contact Support</h2>
+                <p>Can't find what you're looking for? Send us a message and we'll get back to you.</p>
+
+                <form action="https://formspree.io/f/xlgdqdjo" method="POST">
+                    <input type="hidden" name="_subject" value="MSC2OSC Support Request">
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="general">General Question</option>
+                            <option value="bug">Bug Report</option>
+                            <option value="feature">Feature Request</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Describe your question or issue..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <div class="contact-alt">
+                    <p>You can also reach us at <a href="mailto:support@kwallace.com">support@kwallace.com</a></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="releases.html">Releases</a>
+                <a href="https://github.com/thekwallace/msc2osc">GitHub</a>
+                <a href="index.html">Home</a>
+            </div>
+            <p class="copyright">&copy; 2025-2026 kwallace.com LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
